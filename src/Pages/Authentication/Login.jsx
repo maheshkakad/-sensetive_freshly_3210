@@ -1,6 +1,5 @@
-/* eslint-disable no-useless-escape */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
+
+
 import React, { useEffect, useState } from "react";
 import * as types from "../../Redux/Auth/actionTypes";
 import { Link, useNavigate } from "react-router-dom";
@@ -53,21 +52,21 @@ export const Login = () => {
     dispatch({ type: types.LOGIN_REQUEST });
     e.preventDefault();
 
-    axios
-      .get("https://punchy-car-5123.herokuapp.com/users")
-      .then((res) => {
-        dispatch({
-          type: types.LOGIN_SUCCESS,
-          payload: checkUser(res.data, email, pwd),
-        });
+    // axios
+    //   .get("https://punchy-car-5123.herokuapp.com/users")
+    //   .then((res) => {
+    //     dispatch({
+    //       type: types.LOGIN_SUCCESS,
+    //       payload: checkUser(res.data, email, pwd),
+    //     });
         navigate("/");
-      })
-      .catch((err) =>
-        dispatch({ type: types.LOGIN_FAILURE, payload: err.message })
-      );
-    if (alertActive) {
-      setAlertActive(false);
-    } else setAlertActive(true);
+    //   })
+    //   .catch((err) =>
+    //     dispatch({ type: types.LOGIN_FAILURE, payload: err.message })
+    //   );
+    // if (alertActive) {
+    //   setAlertActive(false);
+    // } else setAlertActive(true);
   };
   return (
     <Container maxWidth="100%">
