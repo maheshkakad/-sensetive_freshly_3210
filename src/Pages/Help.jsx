@@ -18,7 +18,7 @@ const Help = () => {
 
             <Box w="80%" m="auto" mt="20">
                 <SimpleGrid columns={[1, null, 3]} spacing="40px">
-                    <Box textStyle="helpBoxes">What is Freshly?</Box>
+                    <Box textStyle="helpBoxes">What is the Freshly?</Box>
                     <Box textStyle="helpBoxes">How Does Your Service Work?</Box>
                     <Box textStyle="helpBoxes">Meal Plans & Pricing</Box>
                     <Box textStyle="helpBoxes">about the meals</Box>
